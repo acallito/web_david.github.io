@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Territori a Peu · Coneix la teva terra · Excursions guiades des d'Alcover</title>
+<meta name="description" content="Excursions guiades en grups reduïts per les Muntanyes de Prades, el Montsant i el Priorat. Sortides des d'Alcover amb David Velasco, guia de senderisme.">
+<meta name="author" content="David Velasco Tenor">
+<meta name="theme-color" content="#14372A">
+
+<!-- Adreça definitiva del web. Si el domini final no és aquest,
+     canvia-la aquí i a les quatre etiquetes og:/twitter: de sota. -->
+<link rel="canonical" href="https://www.territoriapeu.com/">
+
+<!-- Com es veu l'enllaç quan el comparteixes per WhatsApp, Instagram o Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:site_name" content="Territori a Peu">
+<meta property="og:title" content="Territori a Peu · Coneix la teva terra">
+<meta property="og:description" content="Excursions guiades en grups reduïts per les Muntanyes de Prades, el Montsant i el Priorat. Sortides des d'Alcover.">
+<meta property="og:url" content="https://www.territoriapeu.com/">
+<meta property="og:image" content="https://www.territoriapeu.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Excursionistes als Avencs de la Febró, a les muntanyes de Prades">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="img/hero.jpg">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ===================== MARCA (definició única, reutilitzada amb <use>) =====================
+     El massís de cim pla del Montsant i la Mussara, amb la senda oberta en negatiu.
+     --m-fons  : color del disc          --m-terra : color del massís
+     --m-anell : color de l'anell        La variant "simple" (sense senda) és per a mides petites.
+     ========================================================================================= -->
+<svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="tp-disc"><circle cx="50" cy="50" r="48.2"/></clipPath>
+  </defs>
+
+  <symbol id="tp-marca" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="49.2" fill="var(--m-fons,#14372A)"/>
+    <circle cx="50" cy="50" r="48.2" fill="none" stroke="var(--m-anell,#C99A4B)" stroke-width="1.5"/>
+    <circle cx="78" cy="52" r="10" fill="var(--m-sol,#C99A4B)"/>
+    <g clip-path="url(#tp-disc)">
+      <path d="M-2,102 L-2,80 L14,80 L22,70 L30,70 L36,52 L40,44 L44,40 L62,40 L64,44 L66,62 L74,68 L80,60 L92,60 L102,73 L102,102 Z"
+            fill="var(--m-terra,#F5F0E6)"/>
+      <polyline points="44,103 36,88 50,80 40,68 52,58 48,45"
+                fill="none" stroke="var(--m-fons,#14372A)" stroke-width="6.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </symbol>
+
+  <symbol id="tp-marca-simple" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="49.2" fill="var(--m-fons,#14372A)"/>
+    <circle cx="50" cy="50" r="48.2" fill="none" stroke="var(--m-anell,#C99A4B)" stroke-width="1.5"/>
+    <circle cx="78" cy="52" r="10" fill="var(--m-sol,#C99A4B)"/>
+    <g clip-path="url(#tp-disc)">
+      <path d="M-2,102 L-2,80 L14,80 L22,70 L30,70 L36,52 L40,44 L44,40 L62,40 L64,44 L66,62 L74,68 L80,60 L92,60 L102,73 L102,102 Z"
+            fill="var(--m-terra,#F5F0E6)"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ===================== CAPÇALERA ===================== -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#inici" aria-label="Territori a Peu · inici">
+      <svg class="brand__marca" viewBox="0 0 100 100" aria-hidden="true"><use href="#tp-marca"/></svg>
+      <span class="brand__txt">
+        <span class="brand__name">TERRITORI A PEU</span>
+        <span class="brand__tag">Coneix la teva terra</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menú principal">
+      <a href="#inici" data-ca="Inici" data-es="Inicio">Inici</a>
+      <a href="#projecte" data-ca="El projecte" data-es="El proyecto">El projecte</a>
+      <a href="#territori" data-ca="El territori" data-es="El territorio">El territori</a>
+      <a href="#excursions" data-ca="Excursions" data-es="Excursiones">Excursions</a>
+      <a href="#celler" data-ca="Del camí al celler" data-es="Del camino a la bodega">Del camí al celler</a>
+      <a href="#contacte" data-ca="Contacte" data-es="Contacto">Contacte</a>
+    </nav>
+    <div class="idiomes" role="group" aria-label="Idioma">
+      <button class="idioma" type="button" data-idioma="ca" aria-pressed="true" aria-label="Català">
+        <svg width="18" height="13" viewBox="0 0 27 18" aria-hidden="true"><rect width="27" height="18" fill="#FCDD09"/><g fill="#DA121A"><rect y="2" width="27" height="2"/><rect y="6" width="27" height="2"/><rect y="10" width="27" height="2"/><rect y="14" width="27" height="2"/></g></svg><span class="idioma__sigla">CA</span></button>
+      <button class="idioma" type="button" data-idioma="es" aria-pressed="false" aria-label="Castellano">
+        <svg width="18" height="13" viewBox="0 0 27 18" aria-hidden="true"><rect width="27" height="18" fill="#AA151B"/><rect y="4.5" width="27" height="9" fill="#F1BF00"/></svg><span class="idioma__sigla">ES</span></button>
+    </div>
+    <a class="btn btn--ocre" href="#contacte" data-ca="Reservar plaça" data-es="Reservar plaza">Reservar plaça</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Obrir el menú" data-ca-aria="Obrir el menú" data-es-aria="Abrir el menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inici">
+  <div class="hero__bg" id="heroBg" role="img" aria-label="Grup d'excursionistes baixant per la senda equipada dels Avencs de la Febró, a les muntanyes de Prades"></div>
+  <div class="wrap">
+    <div class="hero__inner">
+      <span class="kicker" data-ca="Excursions guiades des d&#39;Alcover" data-es="Excursiones guiadas desde Alcover">Excursions guiades des d'Alcover</span>
+      <h1 data-ca="Descobreix el &lt;em&gt;territori&lt;/em&gt; a peu" data-es="Descubre el &lt;em&gt;territorio&lt;/em&gt; a pie">Descobreix el <em>territori</em> a peu</h1>
+      <p class="hero__sub"
+         data-ca="Sortides en grups reduïts per les Muntanyes de Prades, el Montsant i el Priorat. Caminar sense presses, interpretar el paisatge i conèixer la terra que trepitgem."
+         data-es="Salidas en grupos reducidos por las Montañas de Prades, el Montsant y el Priorat. Caminar sin prisas, interpretar el paisaje y conocer la tierra que pisamos.">
+        Sortides en grups reduïts per les Muntanyes de Prades, el Montsant i el Priorat.
+        Caminar sense presses, interpretar el paisatge i conèixer la terra que trepitgem.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--ocre" href="#excursions" data-ca="Veure les excursions" data-es="Ver las excursiones">Veure les excursions</a>
+        <a class="btn btn--ghost" href="#projecte" data-ca="Conèixer el projecte" data-es="Conocer el proyecto">Conèixer el projecte</a>
+      </div>
+      <a class="proxima" id="proxima" href="#excursions"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PER QUÈ CAMINEM ===================== -->
+<section class="section section--verd section--estreta" id="perque">
+  <div class="wrap">
+    <div class="manifest reveal">
+      <div class="manifest__intro">
+        <span class="kicker" data-ca="Per què caminem" data-es="Por qué caminamos">Per què caminem</span>
+        <h2 data-ca="La descoberta de la muntanya" data-es="El descubrimiento de la montaña">La descoberta de la muntanya</h2>
+      </div>
+      <div class="manifest__cos">
+        <p data-ca="Durant segles les muntanyes van ser espais de treball, de ramaderia i de pas entre territoris, però rarament es visitaven per plaer. L&#39;excursionisme ho va capgirar: caminar servia per estudiar el paisatge, recuperar camins, conèixer els pobles i conservar-ne la memòria."
+           data-es="Durante siglos las montañas fueron espacios de trabajo, de ganadería y de paso entre territorios, pero rara vez se visitaban por placer. El excursionismo le dio la vuelta: caminar servía para estudiar el paisaje, recuperar caminos, conocer los pueblos y conservar su memoria.">
+          Durant segles les muntanyes van ser espais de treball, de ramaderia i de pas entre
+          territoris, però rarament es visitaven per plaer. L'excursionisme ho va capgirar:
+          caminar servia per estudiar el paisatge, recuperar camins, conèixer els pobles i
+          conservar-ne la memòria.
+        </p>
+        <blockquote data-ca="Volem recuperar aquesta manera conscient de fer excursionisme: caminar sense presses, interpretar el paisatge i conèixer la terra que trepitgem."
+                    data-es="Queremos recuperar esta manera consciente de hacer excursionismo: caminar sin prisas, interpretar el paisaje y conocer la tierra que pisamos.">
+          Volem recuperar aquesta manera conscient de fer excursionisme: caminar sense presses,
+          interpretar el paisatge i conèixer la terra que trepitgem.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EL PROJECTE ===================== -->
+<section class="section" id="projecte">
+  <div class="wrap">
+    <div class="projecte">
+      <div class="projecte__text reveal">
+        <span class="kicker" data-ca="El projecte" data-es="El proyecto">El projecte</span>
+        <h2>Coneix la teva terra</h2>
+        <p class="section__lead"
+           data-ca="Una iniciativa personal d&#39;excursions guiades que té Alcover com a punt de partida i referència, per apropar la muntanya a les persones del territori."
+           data-es="Una iniciativa personal de excursiones guiadas que tiene Alcover como punto de partida y referencia, para acercar la montaña a las personas del territorio.">
+          Una iniciativa personal d'excursions guiades que té Alcover com a punt de partida i
+          referència, per apropar la muntanya a les persones del territori.
+        </p>
+        <p data-ca="La meva vinculació amb la muntanya ve de tota la vida. Soc &lt;strong&gt;alpinista i escalador&lt;/strong&gt;, amb una llarga experiència en entorns molt diferents: &lt;strong&gt;els Alps, els Andes, l&#39;Atlas i els Pirineus&lt;/strong&gt;, havent assolit cims d&#39;entre 5.000 i 6.000 metres. D&#39;aquests anys n&#39;he tret un coneixement pràctic del terreny, de la preparació d&#39;activitats i, sobretot, de la importància de la planificació i la seguretat."
+           data-es="Mi vinculación con la montaña viene de toda la vida. Soy &lt;strong&gt;alpinista y escalador&lt;/strong&gt;, con una larga experiencia en entornos muy distintos: &lt;strong&gt;los Alpes, los Andes, el Atlas y los Pirineos&lt;/strong&gt;, habiendo alcanzado cimas de entre 5.000 y 6.000 metros. De estos años he sacado un conocimiento práctico del terreno, de la preparación de actividades y, sobre todo, de la importancia de la planificación y la seguridad.">
+          La meva vinculació amb la muntanya ve de tota la vida. Soc <strong>alpinista i escalador</strong>,
+          amb una llarga experiència en entorns molt diferents: <strong>els Alps, els Andes, l'Atlas i els
+          Pirineus</strong>, havent assolit cims d'entre 5.000 i 6.000 metres. D'aquests anys n'he tret un
+          coneixement pràctic del terreny, de la preparació d'activitats i, sobretot, de la importància
+          de la planificació i la seguretat.
+        </p>
+        <p data-ca="Conec especialment les &lt;strong&gt;Muntanyes de Prades, el Montsant, el Priorat i la Conca de Barberà&lt;/strong&gt;. Per a mi, la muntanya és un espai de benestar, d&#39;aprenentatge i de connexió amb el territori i les persones. Les activitats combinen senderisme, descoberta del territori i experiències socials."
+           data-es="Conozco especialmente las &lt;strong&gt;Montañas de Prades, el Montsant, el Priorat y la Conca de Barberà&lt;/strong&gt;. Para mí, la montaña es un espacio de bienestar, de aprendizaje y de conexión con el territorio y las personas. Las actividades combinan senderismo, descubrimiento del territorio y experiencias sociales.">
+          Conec especialment les <strong>Muntanyes de Prades, el Montsant, el Priorat i la Conca de Barberà</strong>.
+          Per a mi, la muntanya és un espai de benestar, d'aprenentatge i de connexió amb el territori
+          i les persones. Les activitats combinen senderisme, descoberta del territori i experiències socials.
+        </p>
+        <p data-ca="Des d&#39;aquesta experiència neix &lt;strong&gt;Territori a Peu&lt;/strong&gt;: preparar les rutes, valorar-ne la dificultat i les condicions, organitzar les sortides i acompanyar el grup, prioritzant sempre la seguretat i la bona experiència de qui camina. A més, les excursions es poden complementar amb &lt;strong&gt;visites a cellers del Priorat, el Montsant i la Conca de Barberà&lt;/strong&gt;, per viure el territori també a través dels seus vins."
+           data-es="De esta experiencia nace &lt;strong&gt;Territori a Peu&lt;/strong&gt;: preparar las rutas, valorar su dificultad y las condiciones, organizar las salidas y acompañar al grupo, priorizando siempre la seguridad y la buena experiencia de quien camina. Además, las excursiones se pueden complementar con &lt;strong&gt;visitas a bodegas del Priorat, el Montsant y la Conca de Barberà&lt;/strong&gt;, para vivir el territorio también a través de sus vinos.">
+          Des d'aquesta experiència neix <strong>Territori a Peu</strong>: preparar les rutes, valorar-ne la
+          dificultat i les condicions, organitzar les sortides i acompanyar el grup, prioritzant sempre
+          la seguretat i la bona experiència de qui camina. A més, les excursions es poden complementar
+          amb <strong>visites a cellers del Priorat, el Montsant i la Conca de Barberà</strong>, per viure
+          el territori també a través dels seus vins.
+        </p>
+        <p data-ca="Un cop al mes, a més, una de les sortides es fa amb la col·laboració del biòleg &lt;strong&gt;Toni Bara&lt;/strong&gt;: una descoberta naturalista dels hàbitats, les espècies i la història natural del nostre entorn."
+           data-es="Una vez al mes, además, una de las salidas se hace con la colaboración del biólogo &lt;strong&gt;Toni Bara&lt;/strong&gt;: un descubrimiento naturalista de los hábitats, las especies y la historia natural de nuestro entorno.">
+          Un cop al mes, a més, una de les sortides es fa amb la col·laboració del biòleg
+          <strong>Toni Bara</strong>: una descoberta naturalista dels hàbitats, les espècies i la
+          història natural del nostre entorn.
+        </p>
+        <div class="signatura">
+          <svg class="signatura__marca" viewBox="0 0 100 100" aria-hidden="true"><use href="#tp-marca"/></svg>
+          <span class="signatura__txt">
+            <b>David Velasco Tenor</b>
+            <span data-ca="Guia de senderisme en baixa muntanya · Alcover (Tarragona)" data-es="Guía de senderismo en baja montaña · Alcover (Tarragona)">Guia de senderisme en baixa muntanya · Alcover (Tarragona)</span>
+          </span>
+        </div>
+      </div>
+      <div class="fotos reveal">
+        <figure>
+          <img id="foto1" src="img/foto1.jpg" alt="David caminant per un bosc de làrixs en alta muntanya" loading="lazy">
+        </figure>
+        <figure>
+          <img id="foto2" src="img/foto2.jpg" alt="David davant d'una vall d'alta muntanya amb estanys" loading="lazy">
+        </figure>
+        <p class="fotos__peu" data-ca="Anys de muntanya als Alps, els Andes, l&#39;Atlas i els Pirineus: l&#39;experiència que hi ha al darrere de cada sortida." data-es="Años de montaña en los Alpes, los Andes, el Atlas y los Pirineos: la experiencia que hay detrás de cada salida.">Anys de muntanya als Alps, els Andes, l'Atlas i els Pirineus: l'experiència que hi ha al darrere de cada sortida.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== EL TERRITORI ===================== -->
+<section class="section section--crema2" id="territori">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="kicker" data-ca="El territori" data-es="El territorio">El territori</span>
+      <h2 data-ca="Les nostres muntanyes" data-es="Nuestras montañas">Les nostres muntanyes</h2>
+      <p class="section__lead"
+         data-ca="Les serres que ens envolten amaguen gorges, ermites, camins de ferradura i una natura extraordinària. Coneix els dos grans massissos on caminem."
+         data-es="Las sierras que nos rodean esconden gargantas, ermitas, caminos de herradura y una naturaleza extraordinaria. Conoce los dos grandes macizos donde caminamos.">
+        Les serres que ens envolten amaguen gorges, ermites, camins de ferradura i una natura
+        extraordinària. Coneix els dos grans massissos on caminem.
+      </p>
+    </div>
+
+    <div class="territori-grid">
+      <!-- MONTSANT -->
+      <article class="territori-bloc reveal">
+        <div class="territori-bloc__cap">
+          <h3 data-ca="El Montsant" data-es="El Montsant">El Montsant</h3>
+          <p class="territori-bloc__sub"
+             data-ca="Una muntanya de silenci, història i paisatge"
+             data-es="Una montaña de silencio, historia y paisaje">Una muntanya de silenci, història i paisatge</p>
+        </div>
+        <div class="territori-bloc__cos">
+          <p data-ca="El Montsant és una serralada imponent que marca el límit entre el Priorat i la Conca de Barberà. Les seves dues cares són radicalment diferents: la &lt;strong&gt;cara sud&lt;/strong&gt; mostra grans parets de conglomerat que cauen cap als cellers del Priorat; la &lt;strong&gt;cara nord&lt;/strong&gt; és humida, boscosa i plena de fonts i barrancs."
+             data-es="El Montsant es una cordillera imponente que marca el límite entre el Priorat y la Conca de Barberà. Sus dos caras son radicalmente distintas: la &lt;strong&gt;cara sur&lt;/strong&gt; muestra grandes paredes de conglomerado que caen hacia las bodegas del Priorat; la &lt;strong&gt;cara norte&lt;/strong&gt; es húmeda, boscosa y llena de fuentes y barrancos.">
+            El Montsant és una serralada imponent que marca el límit entre el Priorat i la Conca de Barberà.
+            Les seves dues cares són radicalment diferents: la <strong>cara sud</strong> mostra grans parets
+            de conglomerat que cauen cap als cellers del Priorat; la <strong>cara nord</strong> és humida,
+            boscosa i plena de fonts i barrancs.
+          </p>
+          <p data-ca="Muntanya sagrada des de fa segles, el Montsant conserva &lt;strong&gt;ermites i llocs de tradició eremítica&lt;/strong&gt;: Santa Magdalena, Sant Antoni, Sant Bartomeu de Fraguerau, Sant Joan del Codolar i la Mare de Déu de Montsant. Els seus &lt;em&gt;graus&lt;/em&gt; —passos naturals entre els cingles— són les portes d&#39;accés a la serra Major."
+             data-es="Montaña sagrada desde hace siglos, el Montsant conserva &lt;strong&gt;ermitas y lugares de tradición eremítica&lt;/strong&gt;: Santa Magdalena, Sant Antoni, Sant Bartomeu de Fraguerau, Sant Joan del Codolar y la Mare de Déu de Montsant. Sus &lt;em&gt;graus&lt;/em&gt; —pasos naturales entre los riscos— son las puertas de acceso a la serra Major.">
+            Muntanya sagrada des de fa segles, el Montsant conserva <strong>ermites i llocs de tradició
+            eremítica</strong>: Santa Magdalena, Sant Antoni, Sant Bartomeu de Fraguerau, Sant Joan del
+            Codolar i la Mare de Déu de Montsant. Els seus <em>graus</em> —passos naturals entre els
+            cingles— són les portes d'accés a la serra Major.
+          </p>
+          <p data-ca="La geologia del massís és espectacular: conglomerats esculpits pel vent i l&#39;aigua, el congost de Fraguerau i la cresta dels Ventadors. La vegetació varia des dels alzinars mediterranis fins als boscos de roures i teixos, i entre la fauna destaquen les &lt;strong&gt;grans rapinyaires&lt;/strong&gt; que nidifiquen als cingles."
+             data-es="La geología del macizo es espectacular: conglomerados esculpidos por el viento y el agua, el congost de Fraguerau y la cresta de los Ventadors. La vegetación varía desde los encinares mediterráneos hasta los bosques de robles y tejos, y entre la fauna destacan las &lt;strong&gt;grandes rapaces&lt;/strong&gt; que nidifican en los riscos.">
+            La geologia del massís és espectacular: conglomerats esculpits pel vent i l'aigua, el congost
+            de Fraguerau i la cresta dels Ventadors. La vegetació varia des dels alzinars mediterranis fins
+            als boscos de roures i teixos, i entre la fauna destaquen les <strong>grans rapinyaires</strong>
+            que nidifiquen als cingles.
+          </p>
+          <div class="territori-bloc__dades">
+            <span data-ca="Camins històrics" data-es="Caminos históricos">Camins històrics</span>
+            <span data-ca="Ermites eremítiques" data-es="Ermitas eremíticas">Ermites eremítiques</span>
+            <span data-ca="Geologia singular" data-es="Geología singular">Geologia singular</span>
+            <span data-ca="Rapinyaires" data-es="Rapaces">Rapinyaires</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- MUNTANYES DE PRADES -->
+      <article class="territori-bloc reveal">
+        <div class="territori-bloc__cap">
+          <h3 data-ca="Muntanyes de Prades" data-es="Montañas de Prades">Muntanyes de Prades</h3>
+          <p class="territori-bloc__sub"
+             data-ca="Un mosaic de serres, pobles i paisatges"
+             data-es="Un mosaico de sierras, pueblos y paisajes">Un mosaic de serres, pobles i paisatges</p>
+        </div>
+        <div class="territori-bloc__cos">
+          <p data-ca="Les Muntanyes de Prades són un conjunt de serres —la Mussara, la Gritella, la serra de Prades, els Motllats— amb sectors molt diversos que ofereixen una varietat de paisatges sorprenent. Des dels cingles de la Mussara fins als &lt;strong&gt;Avencs de la Febró&lt;/strong&gt;, passant pel &lt;strong&gt;cim de la Baltasana&lt;/strong&gt; (1.201 m), el sostre del massís."
+             data-es="Las Montañas de Prades son un conjunto de sierras —la Mussara, la Gritella, la serra de Prades, los Motllats— con sectores muy diversos que ofrecen una variedad de paisajes sorprendente. Desde los riscos de la Mussara hasta los &lt;strong&gt;Avencs de la Febró&lt;/strong&gt;, pasando por la &lt;strong&gt;cima de la Baltasana&lt;/strong&gt; (1.201 m), el techo del macizo.">
+            Les Muntanyes de Prades són un conjunt de serres —la Mussara, la Gritella, la serra de Prades,
+            els Motllats— amb sectors molt diversos que ofereixen una varietat de paisatges sorprenent.
+            Des dels cingles de la Mussara fins als <strong>Avencs de la Febró</strong>, passant pel
+            <strong>cim de la Baltasana</strong> (1.201 m), el sostre del massís.
+          </p>
+          <p data-ca="Són muntanyes habitades, amb pobles com &lt;strong&gt;Prades, Capafonts, la Febró, Arbolí, Mont-ral, Farena, la Riba, Vilaplana, Vilanova de Prades&lt;/strong&gt; i les ruïnes de la Mussara. A Siurana s&#39;hi conserven les restes del darrer bastió musulmà de Catalunya i una de les panoràmiques més impressionants de la serralada."
+             data-es="Son montañas habitadas, con pueblos como &lt;strong&gt;Prades, Capafonts, la Febró, Arbolí, Mont-ral, Farena, la Riba, Vilaplana, Vilanova de Prades&lt;/strong&gt; y las ruinas de la Mussara. En Siurana se conservan los restos del último bastión musulmán de Cataluña y una de las panorámicas más impresionantes de la cordillera.">
+            Són muntanyes habitades, amb pobles com <strong>Prades, Capafonts, la Febró, Arbolí, Mont-ral,
+            Farena, la Riba, Vilaplana, Vilanova de Prades</strong> i les ruïnes de la Mussara. A Siurana
+            s'hi conserven les restes del darrer bastió musulmà de Catalunya i una de les panoràmiques
+            més impressionants de la serralada.
+          </p>
+          <p data-ca="El &lt;strong&gt;Bosc de Poblet&lt;/strong&gt;, un dels boscos més extensos de Catalunya, conserva alzinars, rouredes atlàntiques i pinedes. La vegetació canvia amb l&#39;altitud, des de la garriga mediterrània fins als boscos caducifolis dels obacs i els cims."
+             data-es="El &lt;strong&gt;Bosque de Poblet&lt;/strong&gt;, uno de los bosques más extensos de Cataluña, conserva encinares, robledales atlánticos y pinedas. La vegetación cambia con la altitud, desde la garriga mediterránea hasta los bosques caducifolios de las umbrías y las cumbres.">
+            El <strong>Bosc de Poblet</strong>, un dels boscos més extensos de Catalunya, conserva alzinars,
+            rouredes atlàntiques i pinedes. La vegetació canvia amb l'altitud, des de la garriga
+            mediterrània fins als boscos caducifolis dels obacs i els cims.
+          </p>
+          <div class="territori-bloc__dades">
+            <span data-ca="Pobles amb història" data-es="Pueblos con historia">Pobles amb història</span>
+            <span data-ca="Avencs i coves" data-es="Simas y cuevas">Avencs i coves</span>
+            <span data-ca="Bosc de Poblet" data-es="Bosque de Poblet">Bosc de Poblet</span>
+            <span data-ca="Siurana" data-es="Siurana">Siurana</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="territori-consells reveal">
+      <h3 data-ca="Preparar l'excursió" data-es="Preparar la excursión">Preparar l'excursió</h3>
+      <div class="territori-consells__grid">
+        <div>
+          <b data-ca="Primavera i tardor" data-es="Primavera y otoño">Primavera i tardor</b>
+          <p data-ca="Les millors èpoques per caminar: temperatures suaus, bona llum i colors espectaculars." data-es="Las mejores épocas para caminar: temperaturas suaves, buena luz y colores espectaculares.">Les millors èpoques per caminar: temperatures suaus, bona llum i colors espectaculars.</p>
+        </div>
+        <div>
+          <b data-ca="Aigua i protecció" data-es="Agua y protección">Aigua i protecció</b>
+          <p data-ca="Porteu sempre aigua suficient, protecció solar i roba adequada a les condicions." data-es="Llevad siempre agua suficiente, protección solar y ropa adecuada a las condiciones.">Porteu sempre aigua suficient, protecció solar i roba adequada a les condicions.</p>
+        </div>
+        <div>
+          <b data-ca="Respecte al medi" data-es="Respeto al medio">Respecte al medi</b>
+          <p data-ca="No deixeu residus, no arrenqueu plantes i respecteu la fauna. El Montsant és espai natural protegit." data-es="No dejéis residuos, no arranquéis plantas y respetad la fauna. El Montsant es espacio natural protegido.">No deixeu residus, no arrenqueu plantes i respecteu la fauna. El Montsant és espai natural protegit.</p>
+        </div>
+        <div>
+          <b data-ca="Calçat de muntanya" data-es="Calzado de montaña">Calçat de muntanya</b>
+          <p data-ca="Imprescindible calçat amb sola adherent i subjecció al turmell, especialment als graus." data-es="Imprescindible calzado con suela adherente y sujeción al tobillo, especialmente en los graus.">Imprescindible calçat amb sola adherent i subjecció al turmell, especialment als graus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXCURSIONS ===================== -->
+<div class="franja-especial" id="franjaEspecial" hidden></div>
+<section class="section section--crema2" id="excursions">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="kicker" data-ca="Octubre i novembre 2026" data-es="Octubre y noviembre 2026">Octubre i novembre 2026</span>
+      <h2 data-ca="Properes excursions" data-es="Próximas excursiones">Properes excursions</h2>
+      <p class="section__lead"
+         data-ca="Itineraris per les Muntanyes de Prades i el Montsant. Les sortides d&#39;un dia surten de l&#39;aparcament d&#39;Alcover a les 8.00 h; l&#39;escapada de novembre surt del Refugi de Mont-ral a les 9.00 h. Places limitades i reserva prèvia."
+         data-es="Itinerarios por las Montañas de Prades y el Montsant. Las salidas de un día parten del aparcamiento de Alcover a las 8.00 h; la escapada de noviembre parte del Refugio de Mont-ral a las 9.00 h. Plazas limitadas y reserva previa.">
+        Itineraris per les Muntanyes de Prades i el Montsant. Les sortides d'un dia surten de
+        l'aparcament d'Alcover a les 8.00 h; l'escapada de novembre surt del Refugi de Mont-ral
+        a les 9.00 h. Places limitades i reserva prèvia.
+      </p>
+    </div>
+
+    <div class="filtres reveal" role="group" aria-label="Filtrar per dificultat">
+      <span class="filtres__label" data-ca="Dificultat" data-es="Dificultad">Dificultat</span>
+      <button class="chip" type="button" data-filtre="totes" aria-pressed="true" data-ca="Totes" data-es="Todas">Totes</button>
+      <button class="chip" type="button" data-filtre="facil" aria-pressed="false" data-ca="Fàcil" data-es="Fácil">Fàcil</button>
+      <button class="chip" type="button" data-filtre="mitjana" aria-pressed="false" data-ca="Mitjana" data-es="Media">Mitjana</button>
+      <button class="chip" type="button" data-filtre="alta" aria-pressed="false" data-ca="Alta" data-es="Alta">Alta</button>
+    </div>
+
+    <div class="rutes" id="rutes"></div>
+
+    <div class="practica reveal">
+      <h3 data-ca="Abans de venir" data-es="Antes de venir">Abans de venir</h3>
+      <p class="practica__lead"
+         data-ca="El que cal saber per apuntar-se a qualsevol de les sortides. Cada excursió té a més el seu material específic, indicat a la fitxa de la ruta."
+         data-es="Lo que hay que saber para apuntarse a cualquiera de las salidas. Cada excursión tiene además su material específico, indicado en la ficha de la ruta.">
+        El que cal saber per apuntar-se a qualsevol de les sortides. Cada excursió té a més el seu
+        material específic, indicat a la fitxa de la ruta.
+      </p>
+      <dl>
+        <div>
+          <dt data-ca="Punt de trobada" data-es="Punto de encuentro">Punt de trobada</dt>
+          <dd data-ca="&lt;b&gt;Aparcament d&#39;Alcover, a les 8.00 h.&lt;/b&gt; Des d&#39;allà ens desplacem fins a l&#39;inici de la ruta. El taller de GPS és l&#39;excepció: comença al local de Serradalt. L&#39;escapada de Mont-ral comença al Refugi de Mont-ral a les 9.00 h."
+              data-es="&lt;b&gt;Aparcamiento de Alcover, a las 8.00 h.&lt;/b&gt; Desde allí nos desplazamos hasta el inicio de la ruta. El taller de GPS es la excepción: empieza en el local de Serradalt. La escapada de Mont-ral empieza en el Refugio de Mont-ral a las 9.00 h."><b>Aparcament d'Alcover, a les 8.00 h.</b> Des d'allà ens desplacem fins a l'inici de la
+              ruta. El taller de GPS és l'excepció: comença al local de Serradalt.
+              L'escapada de Mont-ral comença al Refugi de Mont-ral a les 9.00 h.</dd>
+        </div>
+        <div>
+          <dt data-ca="Cal portar" data-es="Hay que llevar">Cal portar</dt>
+          <dd data-ca="Calçat de muntanya, aigua suficient, esmorzar, protecció solar i roba adequada a les condicions meteorològiques. Algunes rutes demanen material afegit, com el frontal als Avencs de la Febró."
+              data-es="Calzado de montaña, agua suficiente, almuerzo, protección solar y ropa adecuada a las condiciones meteorológicas. Algunas rutas piden material añadido, como el frontal en los Avencs de la Febró.">Calçat de muntanya, aigua suficient, esmorzar, protecció solar i roba adequada a les
+              condicions meteorològiques. Algunes rutes demanen material afegit, com el frontal als
+              Avencs de la Febró.</dd>
+        </div>
+        <div>
+          <dt data-ca="Reserva" data-es="Reserva">Reserva</dt>
+          <dd data-ca="Sortides d&#39;un dia: &lt;b&gt;entre 18 i 21 € per persona&lt;/b&gt; segons la ruta. Escapada de Mont-ral (2 dies, amb sopar i allotjament): &lt;b&gt;57 € per persona&lt;/b&gt;. Places limitades i reserva prèvia."
+              data-es="Salidas de un día: &lt;b&gt;entre 18 y 21 € por persona&lt;/b&gt; según la ruta. Escapada de Mont-ral (2 días, con cena y alojamiento): &lt;b&gt;57 € por persona&lt;/b&gt;. Plazas limitadas y reserva previa.">Sortides d'un dia: <b>entre 18 i 21 € per persona</b> segons la ruta. Escapada de Mont-ral (2 dies, amb sopar
+              i allotjament): <b>57 € per persona</b>. Places limitades i reserva prèvia.</dd>
+        </div>
+        <div>
+          <dt data-ca="Seguretat" data-es="Seguridad">Seguretat</dt>
+          <dd data-ca="Les rutes es preparen i es valoren prèviament, però &lt;b&gt;l&#39;activitat està subjecta a possibles canvis per seguretat&lt;/b&gt;. El projecte compta amb assegurança de responsabilitat civil i d&#39;accidents per als participants."
+              data-es="Las rutas se preparan y se valoran previamente, pero &lt;b&gt;la actividad está sujeta a posibles cambios por seguridad&lt;/b&gt;. El proyecto cuenta con seguro de responsabilidad civil y de accidentes para los participantes.">Les rutes es preparen i es valoren prèviament, però <b>l'activitat està subjecta a
+              possibles canvis per seguretat</b>. El projecte compta amb assegurança de
+              responsabilitat civil i d'accidents per als participants.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATÀLEG DE RUTES ===================== -->
+<section class="section" id="cataleg">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="kicker" data-ca="Catàleg de rutes" data-es="Catálogo de rutas">Catàleg de rutes</span>
+      <h2 data-ca="Més rutes per descobrir" data-es="Más rutas por descubrir">Més rutes per descobrir</h2>
+      <p class="section__lead"
+         data-ca="A banda de les sortides programades, tenim un catàleg de rutes disponibles per a grups i sortides a mida. Escriu-nos i organitzem la sortida que més t&#39;interessi."
+         data-es="Además de las salidas programadas, tenemos un catálogo de rutas disponibles para grupos y salidas a medida. Escríbenos y organizamos la salida que más te interese.">
+        A banda de les sortides programades, tenim un catàleg de rutes disponibles per a grups
+        i sortides a mida. Escriu-nos i organitzem la sortida que més t'interessi.
+      </p>
+    </div>
+    <div class="filtres reveal" role="group" aria-label="Filtrar catàleg per dificultat">
+      <span class="filtres__label" data-ca="Dificultat" data-es="Dificultad">Dificultat</span>
+      <button class="chip chip--cat" type="button" data-filtre-cat="totes" aria-pressed="true" data-ca="Totes" data-es="Todas">Totes</button>
+      <button class="chip chip--cat" type="button" data-filtre-cat="mitjana" aria-pressed="false" data-ca="Moderada" data-es="Moderada">Moderada</button>
+      <button class="chip chip--cat" type="button" data-filtre-cat="alta" aria-pressed="false" data-ca="Alta" data-es="Alta">Alta</button>
+    </div>
+    <div class="rutes" id="cataleg-rutes"></div>
+  </div>
+</section>
+
+<!-- ===================== DEL CAMÍ AL CELLER ===================== -->
+<section class="section section--verd" id="celler">
+  <svg class="filigrana filigrana--esq" viewBox="0 0 100 100" aria-hidden="true"><use href="#tp-marca"/></svg>
+  <div class="wrap">
+    <div class="celler">
+      <div class="celler__text reveal">
+        <span class="kicker" data-ca="Del camí al celler" data-es="Del camino a la bodega">Del camí al celler</span>
+        <h2 data-ca="Enoturisme i gastronomia" data-es="Enoturismo y gastronomía">Enoturisme i gastronomia</h2>
+        <p class="section__lead"
+           data-ca="Les excursions es poden complementar amb visites a cellers i experiències gastronòmiques per viure el territori amb tots els sentits."
+           data-es="Las excursiones se pueden complementar con visitas a bodegas y experiencias gastronómicas para vivir el territorio con todos los sentidos.">
+          Les excursions es poden complementar amb visites a cellers i experiències gastronòmiques
+          per viure el territori amb tots els sentits.
+        </p>
+        <div class="celler__llista">
+          <div class="celler__item">
+            <b data-ca="DOQ Priorat" data-es="DOQ Priorat">DOQ Priorat</b>
+            <p data-ca="Visites a cellers d'una de les denominacions més prestigioses del Mediterrani." data-es="Visitas a bodegas de una de las denominaciones más prestigiosas del Mediterráneo.">Visites a cellers d'una de les denominacions més prestigioses del Mediterrani.</p>
+          </div>
+          <div class="celler__item">
+            <b data-ca="DO Montsant" data-es="DO Montsant">DO Montsant</b>
+            <p data-ca="Cellers als peus de la serralada, amb vins que reflecteixen el paisatge de garnatxes i carinyenes." data-es="Bodegas a los pies de la cordillera, con vinos que reflejan el paisaje de garnachas y cariñenas.">Cellers als peus de la serralada, amb vins que reflecteixen el paisatge de garnatxes i carinyenes.</p>
+          </div>
+          <div class="celler__item">
+            <b data-ca="DO Conca de Barberà" data-es="DO Conca de Barberà">DO Conca de Barberà</b>
+            <p data-ca="Vins de terra fresca, amb varietats autòctones com el trepat, al cor de les muntanyes de Prades." data-es="Vinos de tierra fresca, con variedades autóctonas como el trepat, en el corazón de las montañas de Prades.">Vins de terra fresca, amb varietats autòctones com el trepat, al cor de les muntanyes de Prades.</p>
+          </div>
+          <div class="celler__item">
+            <b data-ca="Vermuts Yzaguirre" data-es="Vermuts Yzaguirre">Vermuts Yzaguirre</b>
+            <p data-ca="Visita a la fàbrica històrica de vermut al Morell." data-es="Visita a la fábrica histórica de vermut en el Morell.">Visita a la fàbrica històrica de vermut al Morell.</p>
+          </div>
+        </div>
+      </div>
+      <div class="celler__paquets reveal">
+        <h3 data-ca="Paquets a mida" data-es="Paquetes a medida">Paquets a mida</h3>
+        <ul>
+          <li data-ca="Excursió guiada" data-es="Excursión guiada">Excursió guiada</li>
+          <li data-ca="Excursió + transport" data-es="Excursión + transporte">Excursió + transport</li>
+          <li data-ca="Excursió + visita a celler" data-es="Excursión + visita a bodega">Excursió + visita a celler</li>
+          <li data-ca="Excursió + tast + transport" data-es="Excursión + cata + transporte">Excursió + tast + transport</li>
+          <li data-ca="Activitats per a grups a mida" data-es="Actividades para grupos a medida">Activitats per a grups a mida</li>
+        </ul>
+        <div class="celler__transport">
+          <b data-ca="Transport" data-es="Transporte">Transport</b>
+          <p data-ca="Vehicle per a fins a 6 participants. Per a grups més grans, podem organitzar transport adaptat." data-es="Vehículo para hasta 6 participantes. Para grupos más grandes, podemos organizar transporte adaptado.">Vehicle per a fins a 6 participants. Per a grups més grans, podem organitzar transport adaptat.</p>
+        </div>
+        <a class="btn btn--ocre" href="#contacte" data-ca="Demana pressupost" data-es="Pide presupuesto">Demana pressupost</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TALLER GPS ===================== -->
+<section class="section section--verd" id="taller">
+  <svg class="filigrana" viewBox="0 0 100 100" aria-hidden="true"><use href="#tp-marca"/></svg>
+  <div class="wrap">
+    <div class="taller">
+      <div class="taller__text reveal">
+        <span class="kicker" data-ca="17 i 18 d&#39;octubre · 2026" data-es="17 y 18 de octubre · 2026">17 i 18 d'octubre · 2026</span>
+        <h2 data-ca="Taller pràctic de GPS" data-es="Taller práctico de GPS">Taller pràctic de GPS</h2>
+        <p class="section__lead"
+           data-ca="OruxMaps i Wikiloc, teoria i pràctica. Aprèn a utilitzar el teu telèfon com una eina d&#39;orientació segura: pensat per a boletaires, caçadors i excursionistes que volen seguir rutes, registrar els recorreguts i saber tornar al punt d&#39;inici, fins i tot sense cobertura."
+           data-es="OruxMaps y Wikiloc, teoría y práctica. Aprende a utilizar tu teléfono como una herramienta de orientación segura: pensado para buscadores de setas, cazadores y excursionistas que quieren seguir rutas, registrar sus recorridos y saber volver al punto de inicio, incluso sin cobertura.">
+          OruxMaps i Wikiloc, teoria i pràctica. Aprèn a utilitzar el teu telèfon com una eina
+          d'orientació segura: pensat per a boletaires, caçadors i excursionistes que volen seguir
+          rutes, registrar els recorreguts i saber tornar al punt d'inici, fins i tot sense cobertura.
+        </p>
+        <div class="taller__dades">
+          <span class="pastilla" data-ca="Nivell &lt;b&gt;inicial&lt;/b&gt;" data-es="Nivel &lt;b&gt;inicial&lt;/b&gt;">Nivell <b>inicial</b></span>
+          <span class="pastilla" data-ca="Places &lt;b&gt;10-12&lt;/b&gt;" data-es="Plazas &lt;b&gt;10-12&lt;/b&gt;">Places <b>10-12</b></span>
+          <span class="pastilla" data-ca="&lt;b&gt;15 €&lt;/b&gt; per activitat" data-es="&lt;b&gt;15 €&lt;/b&gt; por actividad"><b>15 €</b> per activitat</span>
+          <span class="pastilla" data-ca="Pack complet &lt;b&gt;25 €&lt;/b&gt;" data-es="Pack completo &lt;b&gt;25 €&lt;/b&gt;">Pack complet <b>25 €</b></span>
+        </div>
+        <a class="btn btn--ocre" href="#contacte" data-reserva="Taller pràctic de GPS: OruxMaps i Wikiloc" data-ca="Reservar plaça al taller" data-es="Reservar plaza en el taller">Reservar plaça al taller</a>
+      </div>
+      <div class="taller__dies reveal">
+        <div class="dia">
+          <div class="dia__cap"><b data-ca="Dissabte 17" data-es="Sábado 17">Dissabte 17</b><span data-ca="9.00 - 12.00 h · Local de Serradalt" data-es="9.00 - 12.00 h · Local de Serradalt">9.00 - 12.00 h · Local de Serradalt</span></div>
+          <p data-ca="Configurarem OruxMaps i Wikiloc, descarregarem mapes, aprendrem a seguir i gravar tracks, marcar punts d&#39;interès i recuperar el camí de tornada. Acabarem amb una pràctica breu a l&#39;exterior."
+             data-es="Configuraremos OruxMaps y Wikiloc, descargaremos mapas, aprenderemos a seguir y grabar tracks, marcar puntos de interés y recuperar el camino de vuelta. Acabaremos con una práctica breve en el exterior.">
+            Configurarem OruxMaps i Wikiloc, descarregarem mapes, aprendrem a seguir i gravar tracks,
+            marcar punts d'interès i recuperar el camí de tornada. Acabarem amb una pràctica breu a l'exterior.
+          </p>
+        </div>
+        <div class="dia">
+          <div class="dia__cap"><b data-ca="Diumenge 18" data-es="Domingo 18">Diumenge 18</b><span data-ca="9.00 - 12.00 h · Sortida pràctica" data-es="9.00 - 12.00 h · Salida práctica">9.00 - 12.00 h · Sortida pràctica</span></div>
+          <p data-ca="Recorregut Pont de Goi - Serradalt - Granja de Doldellops. Exercicis reals d&#39;orientació, seguiment de track, waypoints, ús sense cobertura i retorn al punt inicial."
+             data-es="Recorrido Pont de Goi - Serradalt - Granja de Doldellops. Ejercicios reales de orientación, seguimiento de track, waypoints, uso sin cobertura y regreso al punto inicial.">
+            Recorregut Pont de Goi - Serradalt - Granja de Doldellops. Exercicis reals d'orientació,
+            seguiment de track, waypoints, ús sense cobertura i retorn al punt inicial.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTE ===================== -->
+<section class="section" id="contacte">
+  <div class="wrap">
+    <div class="contacte">
+      <div class="contacte__info reveal">
+        <span class="kicker" data-ca="Contacte" data-es="Contacto">Contacte</span>
+        <h2 data-ca="Reserva la teva plaça" data-es="Reserva tu plaza">Reserva la teva plaça</h2>
+        <p class="section__lead"
+           data-ca="Escriu-me indicant l&#39;excursió que t&#39;interessa i el nombre de places. Et confirmaré la disponibilitat i els detalls de la sortida."
+           data-es="Escríbeme indicando la excursión que te interesa y el número de plazas. Te confirmaré la disponibilidad y los detalles de la salida.">
+          Escriu-me indicant l'excursió que t'interessa i el nombre de places. Et confirmaré la
+          disponibilitat i els detalls de la sortida.
+        </p>
+        <ul class="info-llista">
+          <li>
+            <span class="ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </span>
+            <div><b data-ca="Correu" data-es="Correo">Correu</b><a href="mailto:Territoriapeu@gmail.com">Territoriapeu@gmail.com</a></div>
+          </li>
+          <li>
+            <span class="ic ic--wa" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/></svg>
+            </span>
+            <div><b>WhatsApp</b><a class="btn btn--wa btn--petit" id="wa-contacte" href="https://wa.me/34633459662?text=Hola!%20Tinc%20un%20dubte%20sobre%20les%20excursions" target="_blank" rel="noopener" aria-label="WhatsApp 633 45 96 62" data-ca="Escriu-me per WhatsApp" data-es="Escríbeme por WhatsApp">Escriu-me per WhatsApp</a></div>
+          </li>
+          <li>
+            <span class="ic ic--ig" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </span>
+            <div><b>Instagram</b><a href="https://www.instagram.com/territoriapeu" target="_blank" rel="noopener">@territoriapeu</a></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div><b data-ca="Punt de trobada" data-es="Punto de encuentro">Punt de trobada</b><p data-ca="A concretar segons la ruta" data-es="A concretar según la ruta">A concretar segons la ruta</p></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div><b data-ca="Sortides" data-es="Salidas">Sortides</b><p data-ca="Caps de setmana · entre setmana amb reserva" data-es="Fines de semana · entre semana con reserva">Caps de setmana · entre setmana amb reserva</p></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 21 10-18 10 18Z"/><path d="M8.5 12h7"/></svg>
+            </span>
+            <div><b data-ca="Àmbit" data-es="Ámbito">Àmbit</b><p>Alcover · Prades · Montsant · Priorat</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <form id="form" class="reveal" novalidate>
+        <div class="camps">
+          <div class="camp">
+            <label for="nom" data-ca="Nom i cognoms" data-es="Nombre y apellidos">Nom i cognoms</label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required>
+          </div>
+          <div class="camp">
+            <label for="email" data-ca="Correu electrònic" data-es="Correo electrónico">Correu electrònic</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="camp">
+            <label for="telefon" data-ca="Telèfon" data-es="Teléfono">Telèfon</label>
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+          </div>
+          <div class="camp">
+            <label for="places" data-ca="Places" data-es="Plazas">Places</label>
+            <select id="places" name="places">
+              <option>1</option><option>2</option><option>3</option>
+              <option>4</option><option data-ca="5 o més" data-es="5 o más">5 o més</option>
+            </select>
+          </div>
+          <div class="camp camp--ample">
+            <label for="activitat" data-ca="Activitat" data-es="Actividad">Activitat</label>
+            <select id="activitat" name="activitat"></select>
+          </div>
+          <div class="camp camp--ample">
+            <label for="missatge" data-ca="Missatge" data-es="Mensaje">Missatge</label>
+            <textarea id="missatge" name="missatge" placeholder="Explica'm el que necessitis saber: nivell, material, dubtes…" data-ca-ph="Explica&#39;m el que necessitis saber: nivell, material, dubtes…" data-es-ph="Cuéntame lo que necesites saber: nivel, material, dudas…"></textarea>
+          </div>
+        </div>
+        <div class="form__peu">
+          <p class="form__nota" data-ca="En enviar s&#39;obrirà el teu gestor de correu amb el missatge preparat." data-es="Al enviar se abrirá tu gestor de correo con el mensaje preparado.">En enviar s'obrirà el teu gestor de correu amb el missatge preparat.</p>
+          <button class="btn btn--verd" type="submit" data-ca="Enviar la sol·licitud" data-es="Enviar la solicitud">Enviar la sol·licitud</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOTÓ FLOTANT DE WHATSAPP ===================== -->
+<a class="wa-flotant" id="waFlotant" href="https://wa.me/34633459662" target="_blank" rel="noopener" aria-label="Obrir xat de WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/></svg>
+</a>
+
+<!-- ===================== PEU ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <a class="brand brand--gran" href="#inici" aria-label="Territori a Peu · inici">
+        <svg class="brand__marca" viewBox="0 0 100 100" aria-hidden="true"><use href="#tp-marca"/></svg>
+        <span class="brand__txt">
+          <span class="brand__name">TERRITORI A PEU</span>
+          <span class="brand__tag">Coneix la teva terra</span>
+        </span>
+      </a>
+      <nav class="footer__nav" aria-label="Menú del peu">
+        <a href="#inici" data-ca="Inici" data-es="Inicio">Inici</a>
+        <a href="#projecte" data-ca="El projecte" data-es="El proyecto">El projecte</a>
+        <a href="#territori" data-ca="El territori" data-es="El territorio">El territori</a>
+        <a href="#excursions" data-ca="Excursions" data-es="Excursiones">Excursions</a>
+        <a href="#cataleg" data-ca="Catàleg" data-es="Catálogo">Catàleg</a>
+        <a href="#celler" data-ca="Del camí al celler" data-es="Del camino a la bodega">Del camí al celler</a>
+        <a href="#taller" data-ca="Taller GPS" data-es="Taller GPS">Taller GPS</a>
+        <a href="#contacte" data-ca="Contacte" data-es="Contacto">Contacte</a>
+      </nav>
+    </div>
+    <div class="footer__bot">
+      <span>© 2026 Territori a Peu · David Velasco Tenor · Alcover (Tarragona)</span>
+      <span data-ca="Activitats subjectes a possibles canvis per seguretat" data-es="Actividades sujetas a posibles cambios por seguridad">Activitats subjectes a possibles canvis per seguretat</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/idiomas.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
